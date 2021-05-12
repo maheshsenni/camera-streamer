@@ -1,16 +1,15 @@
 <!doctype html>
 <html>
     <head>
-        <title>Video</title>
+        <title>Camera Streamer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             img {
-                width: 640px;
-                height: 360px;
+                width: 100%;
             }
         </style>
     </head>
     <body>
-        <h3>Video will come here</h3>
         <img src="{{ url_for('video.video') }}"></img>
     </body>
 </html>

@@ -1,0 +1,12 @@
+[Unit]
+Description=Camera Streamer
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/projects/camera-streamer
+ExecStart=/home/pi/projects/camera-streamer/venv/bin/waitress-serve --port 5000 --call 'app:create_app'
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

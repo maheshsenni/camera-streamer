@@ -9,8 +9,11 @@ def create_app():
     app.register_blueprint(video.create_video_bp())
 
     @app.route("/")
-    def hello():
-        # return "Hello, World!"
+    def home():
         return render_template("index.html")
+
+    @app.route("/status")
+    def status():
+        return "Up"
 
     return app
